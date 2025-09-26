@@ -1,1 +1,53 @@
-<p>register-page works!</p>
+<!-- component -->
+<div class="bg-gradient-to-r from-green-300 to-green-200 flex flex-col lg:flex-row justify-center items-center min-h-screen">
+  <div class="w-full  lg:w-1/2 rounded-lg lg:rounded-l-none p-8 md:p-10 flex flex-col justify-center">
+    <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">Registro</h1>
+    <form action="#" method="POST" class="space-y-4">
+      <!-- Username Input -->
+      <div>
+        <label for="nombre" class="block text-gray-600 mb-1">Nombre</label>
+        <input type="text" id="nombre" name="nombre"
+          class="w-full border bg-white border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+          autocomplete="off">
+      </div>
+      <!-- Username Input -->
+      <div>
+        <label for="username" class="block text-gray-600 mb-1">Usuario</label>
+        <input type="text" id="username" name="username"
+          class="w-full border bg-white border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+          autocomplete="off">
+      </div>
+      <!-- Username Input -->
+      <div>
+        <label for="username" class="block text-gray-600">Correo</label>
+        <input type="text" id="username" name="username"
+          class="w-full border bg-white border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+          autocomplete="off">
+      </div>
+
+      <!-- Password Input -->
+      <div>
+        <label for="password" class="block text-gray-600 mb-1">Contraseña</label>
+        <input type="password" id="password" name="password"
+          class="w-full border bg-white border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+          autocomplete="off">
+      </div>
+
+
+
+
+      <!-- Register Button -->
+      <button type="submit"
+        class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md py-2 mt-2 transition-colors duration-200">Registrate</button>
+    </form>
+
+    <!-- Sign up Link -->
+    <div class="mt-6 text-center">
+      <span class="text-gray-600 mr-1">Ya tienes una cuenta?</span>
+      <a routerLink="/login" class="text-green-500 font-semibold hover:underline">Inicia Sesión Aqui</a>
+    </div>
+  </div>
+  <div class="w-full lg:w-1/2 h-64 lg:h-screen hidden lg:block">
+    <img src="1.png" alt="Placeholder Image" class="object-cover w-full h-full rounded-l-lg bg-green-100">
+  </div>
+</div>

@@ -6,7 +6,7 @@
       <a routerLink="/" class="flex items-center">
         <img src="LOGOKIDSLEAGUE.png" class="mr-3 h-10 sm:h-12" alt="KidsLeague Logo" />
         <span class="text-white font-extrabold text-xl">
-          KIDS<span class="text-yellow-300">LEAGUE</span>
+          CITY<span class="text-yellow-300">CHAMPIONS</span>
         </span>
       </a>
 
@@ -14,8 +14,8 @@
       <div class="hidden lg:flex items-center space-x-6">
         <ul class="flex space-x-6 text-white font-medium">
           <li><a routerLink="/" class="hover:text-yellow-200">Inicio</a></li>
-          <li><a routerLink="about-us" class="hover:text-yellow-200">Sobre Nosotros</a></li>
-          <li><a routerLink="eventos" class="hover:text-yellow-200">Eventos</a></li>
+          <li><a routerLink="/about-us" class="hover:text-yellow-200">Sobre Nosotros</a></li>
+          <li><a routerLink="/eventos" class="hover:text-yellow-200">Eventos</a></li>
           <li><a routerLink="#" class="hover:text-yellow-200">Clasificaciones</a></li>
           <li><a routerLink="#" class="hover:text-yellow-200">Árbitros</a></li>
           <li><a routerLink="#" class="hover:text-yellow-200">Ganadores</a></li>
@@ -45,8 +45,8 @@
     <div *ngIf="menuAbierto" class="lg:hidden mt-3 bg-green-700 rounded-lg p-3">
       <ul class="flex flex-col space-y-2">
         <li><a routerLink="/" (click)="toggleMenu()" class="block text-white hover:text-yellow-200">Inicio</a></li>
-        <li><a routerLink="about-us" (click)="toggleMenu()" class="block text-white hover:text-yellow-200">Sobre Nosotros</a></li>
-        <li><a routerLink="eventos" (click)="toggleMenu()" class="block text-white hover:text-yellow-200">Eventos</a></li>
+        <li><a routerLink="/about-us" (click)="toggleMenu()" class="block text-white hover:text-yellow-200">Sobre Nosotros</a></li>
+        <li><a routerLink="/eventos" (click)="toggleMenu()" class="block text-white hover:text-yellow-200">Eventos</a></li>
         <li><a routerLink="#" (click)="toggleMenu()" class="block text-white hover:text-yellow-200">Clasificaciones</a></li>
         <li><a routerLink="#" (click)="toggleMenu()" class="block text-white hover:text-yellow-200">Árbitros</a></li>
         <li><a routerLink="#" (click)="toggleMenu()" class="block text-white hover:text-yellow-200">Ganadores</a></li>

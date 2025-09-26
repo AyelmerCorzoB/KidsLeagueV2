@@ -1,32 +1,37 @@
 <section class="max-w-screen-xl mx-auto px-4 py-8">
-  <h2 class="text-2xl font-bold mb-6 text-center">Noticias</h2>
+  <div class="mb-6">
+    <iframe
+      class="w-full h-[400px] sm:h-[500px]"
+      [src]="videoActual"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
 
-  <div class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-6">
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <iframe class="w-full h-48 sm:h-56" src="https://www.youtube.com/embed/KKZSGJvQLnY?si=Knn0TfKw1JvlmbkY"
-              title="YouTube preview" frameborder="0" allowfullscreen></iframe>
-      <div class="p-4">
-        <h3 class="font-semibold text-lg mb-2">FINAL TORENO M24</h3>
-        <p class="text-gray-600 text-sm">Final del torneo M24, organizado por el popular Coco, con los equipos Florentina y Nápolis. El equipo ganador se lleva 1.500.000 pesos.</p>
-      </div>
+  <div class="relative">
+    <button
+      (click)="scrollPrev()"
+      class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-5 rounded z-10"
+    >
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </button>
+
+    <div #carrusel class="flex gap-4 overflow-hidden">
+      <iframe
+        *ngFor="let url of urls"
+        (click)="seleccionarVideo(url)"
+        class="w-64 h-36 flex-shrink-0 cursor-pointer hover:scale-105 transition-transform"
+        [src]="sanitizer.bypassSecurityTrustResourceUrl(url)"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
     </div>
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <iframe class="w-full h-48 sm:h-56" src="https://www.youtube.com/embed/KKZSGJvQLnY?si=Knn0TfKw1JvlmbkY"
-              title="YouTube preview" frameborder="0" allowfullscreen></iframe>
-      <div class="p-4">
-        <h3 class="font-semibold text-lg mb-2">FINAL TORENO M24</h3>
-        <p class="text-gray-600 text-sm">Final del torneo M24, organizado por el popular Coco, con los equipos Florentina y Nápolis. El equipo ganador se lleva 1.500.000 pesos.</p>
-      </div>
-    </div>
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <iframe class="w-full h-48 sm:h-56" src="https://www.youtube.com/embed/KKZSGJvQLnY?si=Knn0TfKw1JvlmbkY"
-              title="YouTube preview" frameborder="0" allowfullscreen></iframe>
-      <div class="p-4">
-        <h3 class="font-semibold text-lg mb-2">FINAL TORENO M24</h3>
-        <p class="text-gray-600 text-sm">Final del torneo M24, organizado por el popular Coco, con los equipos Florentina y Nápolis. El equipo ganador se lleva 1.500.000 pesos.</p>
-      </div>
-    </div>
+    <button
+      (click)="scrollNext()"
+      class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-5 rounded z-10"
+    >
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </button>
   </div>
 </section>

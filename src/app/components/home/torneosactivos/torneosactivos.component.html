@@ -1,67 +1,24 @@
 <section class="bg-gray-100 py-12">
   <div class="max-w-screen-xl mx-auto px-4">
-    <!-- Título principal -->
-    <h2 class="text-3xl font-bold mb-10 text-center text-green-800">Torneos Activos</h2>
+    <h2 class="text-3xl font-bold mb-10 text-center text-green-800">
+      Torneos Activos
+    </h2>
 
-    <div class="lg:flex lg:items-start lg:gap-12">
-      <!-- Tarjetas de torneos -->
-      <div class="lg:flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Tarjeta 1 -->
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
-          <img src="torneo1.jpg" alt="Torneo 1" class="w-full h-48 object-cover">
-          <div class="p-5 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-bold mb-2 text-green-700">Liga Tibuyana</h3>
-              <p class="text-gray-500 mb-2">Fecha: 25/09/2025</p>
-              <p class="text-gray-700 text-sm">Participan equipos de toda la región en distintas categorías.</p>
-            </div>
-            <a href="#"
-               class="mt-4 inline-flex items-center justify-center px-6 py-3 text-base font-medium text-center text-emerald-800 bg-emerald-100 border border-emerald-300 rounded-lg hover:bg-emerald-200 focus:ring-4 focus:ring-emerald-200 transition-transform hover:scale-105">
-              Detalles
-            </a>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let torneo of torneos"
+           class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
+        <img [src]="torneo.imagen" [alt]="torneo.nombre" class="w-full h-48 object-cover" />
+        <div class="p-5 flex flex-col flex-1 justify-between">
+          <div>
+            <h3 class="text-lg font-bold mb-2 text-green-700">{{ torneo.nombre }}</h3>
+            <p class="text-gray-500 mb-2">Fecha: {{ torneo.fecha }}</p>
+            <p class="text-gray-700 text-sm">{{ torneo.descripcion }}</p>
           </div>
+          <a href="#"
+             class="mt-4 inline-flex items-center justify-center px-6 py-3 text-base font-medium text-center text-emerald-800 bg-emerald-100 border border-emerald-300 rounded-lg hover:bg-emerald-200 focus:ring-4 focus:ring-emerald-200 transition-transform hover:scale-105">
+            Detalles
+          </a>
         </div>
-
-        <!-- Tarjeta 2 -->
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
-          <img src="torneo2.png" alt="Torneo 2" class="w-full h-48 object-cover">
-          <div class="p-5 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-bold mb-2 text-green-700">Tibu con Futuro</h3>
-              <p class="text-gray-500 mb-2">Fecha: 28/09/2025</p>
-              <p class="text-gray-700 text-sm">Equipos destacados compiten por la copa regional de la temporada.</p>
-            </div>
-            <a href="#"
-               class="mt-4 inline-flex items-center justify-center px-6 py-3 text-base font-medium text-center text-emerald-800 bg-emerald-100 border border-emerald-300 rounded-lg hover:bg-emerald-200 focus:ring-4 focus:ring-emerald-200 transition-transform hover:scale-105">
-              Detalles
-            </a>
-          </div>
-        </div>
-
-        <!-- Tarjeta 3 -->
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
-          <img src="torneo3.png" alt="Torneo 3" class="w-full h-48 object-cover">
-          <div class="p-5 flex flex-col flex-1 justify-between">
-            <div>
-              <h3 class="text-lg font-bold mb-2 text-green-700">Torneo Favela</h3>
-              <p class="text-gray-500 mb-2">Fecha: 30/09/2025</p>
-              <p class="text-gray-700 text-sm">Equipos participan en partidos amistosos y ganan premios increíbles.</p>
-            </div>
-            <a href="#"
-               class="mt-4 inline-flex items-center justify-center px-6 py-3 text-base font-medium text-center text-emerald-800 bg-emerald-100 border border-emerald-300 rounded-lg hover:bg-emerald-200 focus:ring-4 focus:ring-emerald-200 transition-transform hover:scale-105">
-              Detalles
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Imagen decorativa -->
-      <div class="hidden lg:flex lg:flex-col lg:items-center lg:flex-1 gap-2">
-        <h3 class="font-bold text-xl mb-4 text-green-800">Patrocinadores</h3>
-        <img src="torneos.png" alt="Imagen decorativa" class="w-80 rounded-xl shadow-lg">
-        <img src="torneos.png" alt="Imagen decorativa" class="w-80 rounded-xl shadow-lg">
       </div>
     </div>
   </div>
